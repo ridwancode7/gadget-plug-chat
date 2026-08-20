@@ -1,5 +1,5 @@
-export const WHATSAPP_NUMBER = "2348000000000"; // placeholder
-export const PHONE_DISPLAY = "+234 800 000 0000";
+export const WHATSAPP_NUMBER = "2348132965636";
+export const PHONE_DISPLAY = "+234 813 296 5636";
 export const BUSINESS_NAME = "RGC Gadgets";
 export const LOCATION = "Mowe, Ogun State, Nigeria";
 
