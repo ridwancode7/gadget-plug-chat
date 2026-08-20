@@ -3,7 +3,7 @@ import { waLink } from "./constants";
 
 export const WhatsAppFab = () => (
   <a
-    href={waLink("Hello A3 Prime Gadgets! I'd like to make an inquiry.")}
+    href={waLink("Hello RGC Gadgets! I'd like to make an inquiry.")}
     target="_blank"
     rel="noopener"
     aria-label="Chat with us on WhatsApp"

@@ -54,7 +54,7 @@ export const Navbar = () => {
 
         <div className="hidden lg:block">
           <Button asChild variant="cta" size="default" className="rounded-full">
-            <a href={waLink("Hello A3 Prime Gadgets, I'd like to make an inquiry.")} target="_blank" rel="noopener">
+            <a href={waLink("Hello RGC Gadgets, I'd like to make an inquiry.")} target="_blank" rel="noopener">
               <MessageCircle /> WhatsApp
             </a>
           </Button>
@@ -83,7 +83,7 @@ export const Navbar = () => {
               </a>
             ))}
             <Button asChild variant="cta" className="rounded-full mt-2">
-              <a href={waLink("Hello A3 Prime Gadgets, I'd like to make an inquiry.")} target="_blank" rel="noopener">
+              <a href={waLink("Hello RGC Gadgets, I'd like to make an inquiry.")} target="_blank" rel="noopener">
                 <MessageCircle /> Chat on WhatsApp
               </a>
             </Button>

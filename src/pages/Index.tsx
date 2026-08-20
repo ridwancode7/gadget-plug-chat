@@ -11,7 +11,7 @@ import { useEffect } from "react";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "A3 Prime Gadgets — Phones, Laptops & Expert Repairs";
+    document.title = "RGC Gadgets — Phones, Laptops & Expert Repairs";
     const meta = document.querySelector('meta[name="description"]');
     if (meta) meta.setAttribute("content", "Buy quality smartphones, laptops, JBL speakers and accessories. Trusted phone & laptop repairs, unlocking and servicing. Chat on WhatsApp now.");
   }, []);

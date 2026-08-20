@@ -16,7 +16,7 @@ export const Contact = () => {
       toast({ title: "Please fill in your name and message." });
       return;
     }
-    const text = `Hello A3 Prime Gadgets! My name is ${name}. ${message}`;
+    const text = `Hello RGC Gadgets! My name is ${name}. ${message}`;
     window.open(waLink(text), "_blank");
     toast({ title: "Opening WhatsApp...", description: "We'll reply within minutes." });
     setName("");
@@ -37,7 +37,7 @@ export const Contact = () => {
 
           <div className="space-y-4 mb-8">
             <a
-              href={waLink("Hello A3 Prime Gadgets!")}
+              href={waLink("Hello RGC Gadgets!")}
               target="_blank"
               rel="noopener"
               className="flex items-center gap-4 p-4 rounded-2xl bg-whatsapp/10 border border-whatsapp/20 hover:bg-whatsapp/15 transition-smooth"

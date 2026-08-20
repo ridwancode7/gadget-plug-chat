@@ -53,7 +53,7 @@ export const Hero = () => (
         <div className="relative animate-float">
           <img
             src={heroImg}
-            alt="Premium smartphones, laptops, JBL speakers and accessories from A3 Prime Gadgets"
+            alt="Premium smartphones, laptops, JBL speakers and accessories from RGC Gadgets"
             className="rounded-3xl shadow-blue w-full"
             width={1920}
             height={1080}
