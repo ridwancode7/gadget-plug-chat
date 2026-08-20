@@ -1,20 +1,23 @@
 import { useEffect, useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BUSINESS_NAME, waLink } from "./constants";
 
 const links = [
-  { label: "Home", href: "#home" },
-  { label: "Products", href: "#products" },
-  { label: "About", href: "#about" },
-  { label: "Why Us", href: "#why" },
-  { label: "Reviews", href: "#reviews" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", to: "/" },
+  { label: "Shop", to: "/shop" },
+  { label: "Repairs", to: "/repairs" },
+  { label: "About", to: "/about" },
+  { label: "Contact", to: "/contact" },
 ];
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const { pathname } = useLocation();
+
+  useEffect(() => setOpen(false), [pathname]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -29,32 +32,35 @@ export const Navbar = () => {
       }`}
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
-        <a href="#home" className="flex items-center gap-2 group">
+        <Link to="/" className="flex items-center gap-2 group">
           <div className="w-9 h-9 rounded-lg bg-gradient-blue grid place-items-center font-display font-bold text-primary-foreground shadow-blue">
-            A3
+            RGC
           </div>
           <span className={`font-display font-bold text-lg ${scrolled ? "text-foreground" : "text-white"}`}>
             {BUSINESS_NAME}
           </span>
-        </a>
+        </Link>
 
         <nav className="hidden lg:flex items-center gap-8">
           {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className={`text-sm font-medium transition-smooth hover:text-secondary ${
-                scrolled ? "text-foreground" : "text-white/90"
-              }`}
+            <NavLink
+              key={l.to}
+              to={l.to}
+              end={l.to === "/"}
+              className={({ isActive }) =>
+                `text-sm font-medium transition-smooth hover:text-secondary ${
+                  scrolled ? "text-foreground" : "text-white/90"
+                } ${isActive ? "text-secondary" : ""}`
+              }
             >
               {l.label}
-            </a>
+            </NavLink>
           ))}
         </nav>
 
         <div className="hidden lg:block">
           <Button asChild variant="cta" size="default" className="rounded-full">
-            <a href={waLink("Hello A3 Prime Gadgets, I'd like to make an inquiry.")} target="_blank" rel="noopener">
+            <a href={waLink("Hello RGC Gadgets, I'd like to make an inquiry.")} target="_blank" rel="noopener">
               <MessageCircle /> WhatsApp
             </a>
           </Button>
@@ -73,17 +79,17 @@ export const Navbar = () => {
         <div className="lg:hidden bg-background border-t border-border shadow-card">
           <div className="container py-4 flex flex-col gap-3">
             {links.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
+              <Link
+                key={l.to}
+                to={l.to}
                 onClick={() => setOpen(false)}
                 className="py-2 text-foreground font-medium"
               >
                 {l.label}
-              </a>
+              </Link>
             ))}
             <Button asChild variant="cta" className="rounded-full mt-2">
-              <a href={waLink("Hello A3 Prime Gadgets, I'd like to make an inquiry.")} target="_blank" rel="noopener">
+              <a href={waLink("Hello RGC Gadgets, I'd like to make an inquiry.")} target="_blank" rel="noopener">
                 <MessageCircle /> Chat on WhatsApp
               </a>
             </Button>

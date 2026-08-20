@@ -17,7 +17,7 @@ export const About = () => (
         <div className="absolute -inset-4 bg-gradient-blue rounded-3xl rotate-2 opacity-20 blur-2xl" />
         <img
           src={repairImg}
-          alt="A3 Prime Gadgets technician repairing a smartphone"
+          alt="RGC Gadgets technician repairing a smartphone"
           loading="lazy"
           width={1024}
           height={768}
@@ -35,7 +35,7 @@ export const About = () => (
           Helping you get the <span className="text-primary">best gadgets</span> & reliable repairs — without stress.
         </h2>
         <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-          A3 Prime Gadgets is a team of tech enthusiasts dedicated to making quality
+          RGC Gadgets is a team of tech enthusiasts dedicated to making quality
           devices and dependable repairs accessible to everyone. Whether you need a new
           phone, a laptop upgrade, or a quick fix — we treat every customer like family.
         </p>
@@ -48,7 +48,7 @@ export const About = () => (
           ))}
         </ul>
         <Button asChild variant="cta" size="lg" className="rounded-full">
-          <a href={waLink("Hi! I'd like to learn more about A3 Prime Gadgets.")} target="_blank" rel="noopener">
+          <a href={waLink("Hi! I'd like to learn more about RGC Gadgets.")} target="_blank" rel="noopener">
             <MessageCircle /> Talk to Us on WhatsApp
           </a>
         </Button>

@@ -2,7 +2,7 @@ import { Star, Quote } from "lucide-react";
 
 const reviews = [
   { name: "Tunde A.", role: "Verified Customer", text: "Great service, my phone was fixed same day! Very professional team." },
-  { name: "Chioma E.", role: "Verified Customer", text: "Affordable and original gadgets, highly recommend A3 Prime to anyone." },
+  { name: "Chioma E.", role: "Verified Customer", text: "Affordable and original gadgets, highly recommend RGC to anyone." },
   { name: "Michael O.", role: "Repeat Buyer", text: "Very reliable, I always buy my devices here. They never disappoint." },
 ];
 
@@ -14,7 +14,7 @@ export const Testimonials = () => (
         <h2 className="font-display font-bold text-3xl md:text-5xl mt-3 mb-4 text-foreground">
           What Our Customers Say
         </h2>
-        <p className="text-muted-foreground text-lg">Real reviews from real people who chose A3 Prime Gadgets.</p>
+        <p className="text-muted-foreground text-lg">Real reviews from real people who chose RGC Gadgets.</p>
       </div>
 
       <div className="grid md:grid-cols-3 gap-6">

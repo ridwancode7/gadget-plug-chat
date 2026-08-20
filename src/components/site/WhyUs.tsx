@@ -21,7 +21,7 @@ export const WhyUs = () => (
           Built on Trust. Powered by Expertise.
         </h2>
         <p className="text-white/80 text-lg">
-          Six reasons thousands of customers keep coming back to A3 Prime Gadgets.
+          Six reasons thousands of customers keep coming back to RGC Gadgets.
         </p>
       </div>
 
