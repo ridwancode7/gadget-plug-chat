@@ -7,7 +7,7 @@ export const Footer = () => (
       <div className="md:col-span-2">
         <div className="flex items-center gap-2 mb-4">
           <div className="w-10 h-10 rounded-lg bg-gradient-cta grid place-items-center font-display font-bold shadow-glow">
-            A3
+            RGC
           </div>
           <span className="font-display font-bold text-xl">{BUSINESS_NAME}</span>
         </div>

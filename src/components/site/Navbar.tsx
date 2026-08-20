@@ -31,7 +31,7 @@ export const Navbar = () => {
       <div className="container flex items-center justify-between h-16 md:h-20">
         <a href="#home" className="flex items-center gap-2 group">
           <div className="w-9 h-9 rounded-lg bg-gradient-blue grid place-items-center font-display font-bold text-primary-foreground shadow-blue">
-            A3
+            RGC
           </div>
           <span className={`font-display font-bold text-lg ${scrolled ? "text-foreground" : "text-white"}`}>
             {BUSINESS_NAME}
