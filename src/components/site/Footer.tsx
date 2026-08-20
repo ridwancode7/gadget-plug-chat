@@ -1,5 +1,6 @@
-import { Facebook, Instagram, Twitter, MessageCircle } from "lucide-react";
-import { BUSINESS_NAME, LOCATION, waLink } from "./constants";
+import { Facebook, Instagram, Twitter, MessageCircle, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
+import { BUSINESS_NAME, LOCATION, PHONE_DISPLAY, waLink } from "./constants";
 
 export const Footer = () => (
   <footer className="bg-gradient-hero text-white pt-16 pb-8">
@@ -33,14 +34,14 @@ export const Footer = () => (
         <h4 className="font-display font-bold text-lg mb-4">Quick Links</h4>
         <ul className="space-y-2 text-white/70">
           {[
-            ["Products", "#products"],
-            ["About Us", "#about"],
-            ["Why Choose Us", "#why"],
-            ["Reviews", "#reviews"],
-            ["Contact", "#contact"],
+            ["Home", "/"],
+            ["Shop", "/shop"],
+            ["Repairs & Servicing", "/repairs"],
+            ["About Us", "/about"],
+            ["Contact", "/contact"],
           ].map(([l, h]) => (
             <li key={h}>
-              <a href={h} className="hover:text-secondary transition-smooth">{l}</a>
+              <Link to={h} className="hover:text-secondary transition-smooth">{l}</Link>
             </li>
           ))}
         </ul>
@@ -50,6 +51,14 @@ export const Footer = () => (
         <h4 className="font-display font-bold text-lg mb-4">Contact</h4>
         <ul className="space-y-2 text-white/70 text-sm">
           <li>{LOCATION}</li>
+          <li>
+            <a
+              href={`tel:+${PHONE_DISPLAY.replace(/\D/g, "")}`}
+              className="inline-flex items-center gap-2 text-white hover:text-secondary transition-smooth"
+            >
+              <Phone className="w-4 h-4" /> {PHONE_DISPLAY}
+            </a>
+          </li>
           <li>
             <a
               href={waLink("Hello!")}
